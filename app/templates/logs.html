@@ -1,0 +1,56 @@
+{% from 'base.html' import valida %}
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h2 class="display-6"> Logs </h2>
+            
+            <form action="{{url_for('.listarFiltro')}}" method="POST">
+                {{ formLog.csrf_token }}
+                <div class="mb-3">
+                    {{ formLog.dataInicio.label }} {{ formLog.dataInicio(class="form-control") }}
+                    {{ valida(formLog.dataInicio) }}
+                </div>
+
+                <div class="mb-3">
+                    {{ formLog.dataFim.label }} {{ formLog.dataFim(class="form-control") }}
+                    {{ valida(formLog.dataFim) }}
+                </div>
+                
+                <div class="mb-3">
+                    {{ formLog.contenha.label }} {{ formLog.contenha(class="form-control") }}
+                    {{ valida(formLog.contenha) }}
+                </div>
+
+                <div class="mb-3">
+                    {{ formLog.submit(class="btn btn-outline-primary")}}
+                </div>
+            </form>
+                                
+
+            <table id="example" class="table table-hover table-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>DATA</th>
+                    <th>IP</th>
+                    <th>MENSAGEM</th>
+                </tr>
+
+                {% for linhas in logs %}
+                    <tr>
+                        <td>{{ linhas.id }}</td>
+                        <td>{{ linhas.data }}</td>
+                        <td>{{ linhas.ip }}</td>
+                        <td>{{ linhas.mensagem }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

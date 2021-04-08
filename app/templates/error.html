@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h2 class="display-6"> PAGINA NAO ENCONTRADA </h2>
+            <img src="{{ url_for('static', filename='bootstrap-5.0.0-beta3-dist/imagens/homer-quotes-doh.jpg') }}" class="img-fluid rounded" alt="imagem com o homer error 404">
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block footer %}
+
+<footer class="footer fixed-bottom py-3 bg-light">
+    <div class="container">
+      <span class="text-muted">SISTEMA DE VISUALIZAÇAO DE LOG &copy; Copyright 2021 TODOS OS DIREITOS RESERVADOS.</span>
+    </div>
+  </footer>
+
+
+{% endblock %}

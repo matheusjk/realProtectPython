@@ -18,7 +18,7 @@
 
 <img src="foto_03.png">
 
-<p> Na tela de FILTRO LOGS o usuario podera realizar as seguinte açao abaixo. </p>
+<p> Na tela de FILTRO LOGS o usuario podera realizar a seguinte açao abaixo. </p>
 
 <ul>
 

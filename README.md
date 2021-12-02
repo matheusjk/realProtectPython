@@ -14,6 +14,11 @@
 
 ##
 
+<p> Desafio proposto foi de ler um arquivo .txt e fazer insert na base tendo em vista os campos data, ip ,mensagem, foi feito tambem as telas de filtro e exibiçao, tive que usar logica pra quebrar o campo de data pois este estava junto de outra informaçao alem de converter para o numerico pois o campo de mes estava em extenso exemplo: Nov </p>
+
+
+##
+
 <h4> TELA FILTRO LOGS </h4>
 
 <img src="foto_03.png">
